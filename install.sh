@@ -1,35 +1,37 @@
 #!/usr/bin/env bash
 
 # Exit immediately if a command exits with a non-zero status
-set -e
+set -eE
 
-export PATH="$HOME/.local/bin:$PATH"
+INSTALL_SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+export PATH="$INSTALL_SCRIPT_DIR/bin:$PATH"
+WORK_DIR="$INSTALL_SCRIPT_DIR/install"
+export WORK_DIR="$WORK_DIR"
 
-# Check if script is in "www" folder
-if [ "$PWD" != "/home/$USER/www/setup-ubuntu" ]; then
-    echo "Error: This script must be run from /home/$USER/www/setup-ubuntu/"
-    echo "Current directory: $PWD"
-    exit 1
-fi
+# Preparation
+source $WORK_DIR/preflight/guard.sh
+source $WORK_DIR/preflight/repositories.sh
 
-# Desktop software and tweaks will only be installed if we're running Gnome
-if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
-  # Ensure computer doesn't go to sleep or lock while installing
-  gsettings set org.gnome.desktop.screensaver lock-enabled false
-  gsettings set org.gnome.desktop.session idle-delay 0
+# Packaging
+source $WORK_DIR/packages.sh
+source $WORK_DIR/packaging/tuis.sh
 
-  echo "Installing terminal and desktop tools..."
+# Config
+source $WORK_DIR/config/theme.sh
+source $WORK_DIR/config/gpg.sh
+source $WORK_DIR/config/detect-keyboard-layout.sh
+source $WORK_DIR/config/mise-node.sh
+source $WORK_DIR/config/docker.sh
+source $WORK_DIR/config/mimetypes.sh
+source $WORK_DIR/config/localdb.sh
+source $WORK_DIR/config/hardware/network.sh
+source $WORK_DIR/config/hardware/bluetooth.sh
+source $WORK_DIR/config/hardware/usb-autosuspend.sh
 
-  # Install terminal tools
-  source ~/www/setup-ubuntu/install/terminal.sh
+# Reboot
+clear
+echo
+echo "You're done! So we're ready to reboot now..."
 
-  # Install desktop tools and tweaks
-  source ~/www/setup-ubuntu/install/desktop.sh
-
-  # Revert to normal idle and lock settings
-  gsettings set org.gnome.desktop.screensaver lock-enabled true
-  gsettings set org.gnome.desktop.session idle-delay 300
-else
-  echo "Only installing terminal tools..."
-  source ~/www/setup-ubuntu/install/terminal.sh
-fi
+sleep 5
+reboot
