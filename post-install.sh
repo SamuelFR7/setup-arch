@@ -51,4 +51,5 @@ stow starship
 stow tmux
 rm "/home/$USER/.zshrc"
 stow zsh
+stow themes
 cd -
