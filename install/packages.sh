@@ -5,7 +5,6 @@ sudo pacman -S --noconfirm --needed \
   1password-cli \
   ghostty \
   avahi \
-  zsh \
   bat \
   blueberry \
   brightnessctl \
@@ -42,7 +41,6 @@ sudo pacman -S --noconfirm --needed \
   hyprshot \
   hyprsunset \
   imagemagick \
-  impala \
   imv \
   inetutils \
   jq \
@@ -68,8 +66,6 @@ sudo pacman -S --noconfirm --needed \
   nvim \
   obs-studio \
   obsidian \
-  openfortivpn \
-  google-chrome \
   pamixer \
   playerctl \
   plocate \
@@ -86,19 +82,18 @@ sudo pacman -S --noconfirm --needed \
   starship \
   stow \
   sushi \
-  swaybg \
   swayosd \
   tldr \
   tmux \
   tree-sitter-cli \
   ttf-cascadia-mono-nerd \
   ttf-jetbrains-mono \
+  ttf-jetbrains-mono-nerd \
   tzupdate \
   ufw \
   ufw-docker \
   unzip \
   visual-studio-code-bin \
-  walker-bin \
   sddm \
   waybar \
   wf-recorder \
@@ -117,7 +112,10 @@ sudo pacman -S --noconfirm --needed \
 
 yay -S --noconfirm \
   cursor-bin \
-  postman-bin \
-  watchman
+  google-chrome \
+  hyprpaper \
+  walker-bin
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi

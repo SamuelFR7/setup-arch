@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Setup ZSH as the default
-sudo usermod -s $(which zsh) $(whoami)
-
 # Setup Storages
 redisName="redis7"
 
@@ -22,34 +19,32 @@ if ! op account get &>/dev/null; then
 fi
 
 # Setup Configs
-op document get "i3rjiohtbjyrqznaon4oia4el4" --out-file "/home/$USER/.ssh/dotfiles-key"
-chmod 600 "/home/$USER/.ssh/dotfiles-key"
+touch "$HOME/.ssh/dotfiles-key"
+op document get "i3rjiohtbjyrqznaon4oia4el4" --out-file "$HOME/.ssh/dotfiles-key"
+chmod 600 "$HOME/.ssh/dotfiles-key"
 
-op item get "fe53jvhvfhdpiz65cpufmwvvqy" --fields private_key --reveal | sed '1d;$d' >"/home/$USER/.ssh/id_ed25519"
-op item get "fe53jvhvfhdpiz65cpufmwvvqy" --fields public_key >"/home/$USER/.ssh/id_ed25519.pub"
-chmod 600 "/home/$USER/.ssh/id_ed25519"
-chmod 644 "/home/$USER/.ssh/id_ed25519.pub"
+op item get "fe53jvhvfhdpiz65cpufmwvvqy" --fields private_key --reveal | sed '1d;$d' >"$HOME/.ssh/id_ed25519"
+op item get "fe53jvhvfhdpiz65cpufmwvvqy" --fields public_key >"$HOME/.ssh/id_ed25519.pub"
+chmod 600 "$HOME/.ssh/id_ed25519"
+chmod 644 "$HOME/.ssh/id_ed25519.pub"
 
-cd "/home/$USER"
+cd "$HOME"
 git clone git@github.com:SamuelFR7/new_dotfiles.git dotfiles
-cd "/home/$USER/dotfiles"
-git-crypt unlock "/home/$USER/.ssh/dotfiles-key"
-stow atalhos
-rm -rf "/home/$USER/.config/btop"
+cd "$HOME/dotfiles"
+git-crypt unlock "$HOME/.ssh/dotfiles-key"
+rm -rf "$HOME/.config/btop"
 stow btop
 stow scripts
-stow crontab
-"/home/$USER/.local/scripts/apply_crontab"
-rm -rf "/home/$USER/.config/git"
+rm -rf "$HOME/.config/git"
 stow git
-rm -rf "/home/$USER/.config/ghostty"
+rm -rf "$HOME/.config/ghostty"
 stow ghostty
-rm -rf "/home/$USER/.config/nvim"
+rm -rf "$HOME/.config/nvim"
 stow nvim
 stow ssh
 stow starship
 stow tmux
-rm "/home/$USER/.zshrc"
-stow zsh
 stow themes
+rm "$HOME/.bashrc"
+stow bash
 cd -

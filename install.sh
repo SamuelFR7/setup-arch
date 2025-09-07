@@ -24,8 +24,6 @@ source $WORK_DIR/config/mise-node.sh
 source $WORK_DIR/config/docker.sh
 source $WORK_DIR/config/mimetypes.sh
 source $WORK_DIR/config/localdb.sh
-source $WORK_DIR/config/hardware/network.sh
-source $WORK_DIR/config/hardware/bluetooth.sh
 source $WORK_DIR/config/hardware/usb-autosuspend.sh
 
 # Reboot
