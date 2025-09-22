@@ -19,6 +19,8 @@ if ! op account get &>/dev/null; then
 fi
 
 # Setup Configs
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
 touch "$HOME/.ssh/dotfiles-key"
 op document get "i3rjiohtbjyrqznaon4oia4el4" --out-file "$HOME/.ssh/dotfiles-key"
 chmod 600 "$HOME/.ssh/dotfiles-key"
@@ -34,11 +36,11 @@ cd "$HOME/dotfiles"
 git-crypt unlock "$HOME/.ssh/dotfiles-key"
 rm -rf "$HOME/.config/btop"
 stow btop
+mkdir -p "$HOME/.config/btop/themes"
+mkdir -p "$HOME/.local"
 stow scripts
 rm -rf "$HOME/.config/git"
 stow git
-rm -rf "$HOME/.config/ghostty"
-stow ghostty
 rm -rf "$HOME/.config/nvim"
 stow nvim
 stow ssh

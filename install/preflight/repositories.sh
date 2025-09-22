@@ -22,10 +22,5 @@ if [[ "$(uname -m)" == "x86_64" ]] && [ -z "$DISABLE_CHAOTIC" ]; then
   fi
 fi
 
-# Add omarchy repo
-if ! grep -q "omarchy" /etc/pacman.conf; then
-  echo -e '\n[omarchy]\nSigLevel = Optional TrustAll\nServer = https://pkgs.omarchy.org/$arch' | sudo tee -a /etc/pacman.conf >/dev/null
-fi
-
 # Refresh all repos
 sudo pacman -Syu --noconfirm

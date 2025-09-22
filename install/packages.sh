@@ -1,120 +1,41 @@
 #!/usr/bin/env bash
 
 sudo pacman -S --noconfirm --needed \
-  1password-beta \
-  1password-cli \
-  ghostty \
-  avahi \
   bat \
-  blueberry \
-  brightnessctl \
   btop \
   cargo \
   clang \
-  dbeaver \
   docker \
-  docker-buildx \
-  docker-compose \
   dust \
-  okular \
   eza \
   fastfetch \
-  fcitx5 \
-  fcitx5-gtk \
-  fcitx5-qt \
   fd \
-  ffmpegthumbnailer \
   fzf \
   gcc14 \
   git-crypt \
   github-cli \
-  gnome-calculator \
-  gnome-keyring \
-  gnome-themes-extra \
   gum \
-  gvfs-mtp \
-  hypridle \
-  hyprland \
-  hyprland-qtutils \
-  hyprlock \
-  hyprpicker \
-  hyprshot \
-  hyprsunset \
-  imagemagick \
-  imv \
-  inetutils \
   jq \
-  kdenlive \
-  kvantum-qt5 \
   lazydocker \
   lazygit \
   less \
-  libreoffice \
   llvm \
-  localsend \
   luarocks \
-  mako \
   man \
   mise \
-  mpv \
-  nautilus \
-  noto-fonts \
-  noto-fonts-cjk \
-  noto-fonts-emoji \
-  noto-fonts-extra \
-  nss-mdns \
   nvim \
-  obs-studio \
-  obsidian \
-  pamixer \
-  playerctl \
-  plocate \
-  polkit-gnome \
   postgresql-libs \
-  power-profiles-daemon \
   python-gobject \
   python-poetry-core \
   python-terminaltexteffects \
   ripgrep \
-  satty \
-  slurp \
-  spotify \
   starship \
   stow \
-  sushi \
-  swayosd \
   tldr \
   tmux \
   tree-sitter-cli \
-  ttf-cascadia-mono-nerd \
-  ttf-jetbrains-mono \
-  ttf-jetbrains-mono-nerd \
-  tzupdate \
-  ufw \
-  ufw-docker \
   unzip \
-  visual-studio-code-bin \
-  sddm \
-  waybar \
-  wf-recorder \
-  whois \
-  wiremix \
-  wireplumber \
-  wl-clip-persist \
-  wl-clipboard \
-  wl-screenrec \
-  woff2-font-awesome \
-  xdg-desktop-portal-gtk \
-  xdg-desktop-portal-hyprland \
-  xmlstarlet \
-  yaru-icon-theme \
   yay
-
-yay -S --noconfirm \
-  cursor-bin \
-  google-chrome \
-  hyprpaper \
-  walker-bin
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
