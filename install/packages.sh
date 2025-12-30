@@ -114,7 +114,8 @@ sudo pacman -S --noconfirm --needed \
   xdg-terminal-exec \
   xmlstarlet \
   yaru-icon-theme \
-  yay
+  yay \
+  zsh
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

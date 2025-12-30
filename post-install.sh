@@ -44,7 +44,6 @@ stow nvim
 stow ssh
 stow starship
 stow tmux
-stow themes
-rm "$HOME/.bashrc"
-stow bash
+rm -f "$HOME/.zshrc"
+stow zsh
 cd -
