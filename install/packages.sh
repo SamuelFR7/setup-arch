@@ -6,14 +6,18 @@ sudo pacman -S --noconfirm --needed \
   avahi \
   bat \
   bluetui \
+  bridge-utils \
   brightnessctl \
   btop \
   clang \
   dbeaver \
+  dmidecode \
+  dnsmasq \
   docker \
   docker-buildx \
   docker-compose \
   dust \
+  edk2-ovmf \
   evince \
   eza \
   fastfetch \
@@ -46,6 +50,7 @@ sudo pacman -S --noconfirm --needed \
   impala \
   imv \
   inetutils \
+  iptables-nft \
   iwd \
   jq \
   kdenlive \
@@ -54,6 +59,7 @@ sudo pacman -S --noconfirm --needed \
   lazygit \
   less \
   libreoffice-fresh \
+  libvirt \
   llvm \
   localsend \
   luarocks \
@@ -70,6 +76,7 @@ sudo pacman -S --noconfirm --needed \
   nss-mdns \
   nvim \
   obs-studio \
+  openbsd-netcat \
   pamixer \
   playerctl \
   plocate \
@@ -79,6 +86,7 @@ sudo pacman -S --noconfirm --needed \
   python-gobject \
   python-poetry-core \
   python-terminaltexteffects \
+  qemu-full \
   qt5-wayland \
   ripgrep \
   satty \
@@ -101,6 +109,8 @@ sudo pacman -S --noconfirm --needed \
   ufw-docker \
   unzip \
   uwsm \
+  virt-manager \
+  vde2 \
   waybar \
   wayfreeze \
   whois \
