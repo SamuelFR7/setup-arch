@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo pacman -R iptables
+
 sudo pacman -S --noconfirm --needed \
   1password-beta \
   1password-cli \
