@@ -20,7 +20,6 @@ source $WORK_DIR/packaging/tuis.sh
 source $WORK_DIR/config/theme.sh
 source $WORK_DIR/config/zsh.sh
 source $WORK_DIR/config/gpg.sh
-source $WORK_DIR/config/detect-keyboard-layout.sh
 source $WORK_DIR/config/mise-node.sh
 source $WORK_DIR/config/docker.sh
 source $WORK_DIR/config/swayosd.sh
