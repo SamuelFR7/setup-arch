@@ -115,6 +115,7 @@ sudo pacman -S --noconfirm --needed \
   xmlstarlet \
   yaru-icon-theme \
   yay \
+  zen-browser-bin \
   zsh
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
