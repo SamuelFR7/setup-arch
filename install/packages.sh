@@ -52,6 +52,7 @@ sudo pacman -S --noconfirm --needed \
   impala \
   imv \
   inetutils \
+  iptables-nft \
   iwd \
   jq \
   kdenlive \
