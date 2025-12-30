@@ -4,6 +4,7 @@
 set -eE
 
 INSTALL_SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+export INSTALL_SCRIPT_DIR="$INSTALL_SCRIPT_DIR"
 export PATH="$INSTALL_SCRIPT_DIR/bin:$PATH"
 WORK_DIR="$INSTALL_SCRIPT_DIR/install"
 export WORK_DIR="$WORK_DIR"
