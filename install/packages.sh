@@ -3,20 +3,18 @@
 sudo pacman -S --noconfirm --needed \
   1password-beta \
   1password-cli \
-  ghostty \
   avahi \
   bat \
-  blueberry \
+  bluetui \
   brightnessctl \
   btop \
-  cargo \
   clang \
   dbeaver \
   docker \
   docker-buildx \
   docker-compose \
   dust \
-  okular \
+  evince \
   eza \
   fastfetch \
   fcitx5 \
@@ -24,40 +22,47 @@ sudo pacman -S --noconfirm --needed \
   fcitx5-qt \
   fd \
   ffmpegthumbnailer \
+  fontconfig \
   fzf \
-  gcc14 \
+  ghostty \
   git-crypt \
   github-cli \
   gnome-calculator \
   gnome-keyring \
   gnome-themes-extra \
+  grim \
   gum \
   gvfs-mtp \
+  gvfs-nfs \
+  gvfs-smb \
   hypridle \
   hyprland \
-  hyprland-qtutils \
+  hyprland-guiutils \
+  hyprland-preview-share-picker \
   hyprlock \
   hyprpicker \
-  hyprshot \
   hyprsunset \
   imagemagick \
+  impala \
   imv \
   inetutils \
+  iwd \
   jq \
   kdenlive \
   kvantum-qt5 \
   lazydocker \
   lazygit \
   less \
-  libreoffice \
+  libreoffice-fresh \
   llvm \
   localsend \
   luarocks \
   mako \
-  man \
+  man-db \
   mise \
   mpv \
   nautilus \
+  gnome-disk-utility \
   noto-fonts \
   noto-fonts-cjk \
   noto-fonts-emoji \
@@ -65,7 +70,6 @@ sudo pacman -S --noconfirm --needed \
   nss-mdns \
   nvim \
   obs-studio \
-  obsidian \
   pamixer \
   playerctl \
   plocate \
@@ -75,46 +79,42 @@ sudo pacman -S --noconfirm --needed \
   python-gobject \
   python-poetry-core \
   python-terminaltexteffects \
+  qt5-wayland \
   ripgrep \
   satty \
+  sddm \
+  signal-desktop \
   slurp \
   spotify \
   starship \
   stow \
   sushi \
+  swaybg \
   swayosd \
   tldr \
   tmux \
   tree-sitter-cli \
-  ttf-cascadia-mono-nerd \
   ttf-jetbrains-mono \
   ttf-jetbrains-mono-nerd \
   tzupdate \
   ufw \
   ufw-docker \
   unzip \
-  visual-studio-code-bin \
-  sddm \
+  uwsm \
   waybar \
-  wf-recorder \
+  wayfreeze \
   whois \
+  wireless-regdb \
   wiremix \
   wireplumber \
-  wl-clip-persist \
   wl-clipboard \
-  wl-screenrec \
   woff2-font-awesome \
   xdg-desktop-portal-gtk \
   xdg-desktop-portal-hyprland \
+  xdg-terminal-exec \
   xmlstarlet \
   yaru-icon-theme \
   yay
-
-yay -S --noconfirm \
-  cursor-bin \
-  google-chrome \
-  hyprpaper \
-  walker-bin
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
