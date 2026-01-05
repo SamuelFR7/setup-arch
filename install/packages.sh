@@ -18,6 +18,8 @@ sudo pacman -S --noconfirm --needed \
   docker-compose \
   dust \
   edk2-ovmf \
+  elephant \
+  elephant-desktopapplications \
   evince \
   eza \
   fastfetch \
@@ -50,7 +52,6 @@ sudo pacman -S --noconfirm --needed \
   impala \
   imv \
   inetutils \
-  iptables-nft \
   iwd \
   jq \
   kdenlive \
@@ -91,7 +92,6 @@ sudo pacman -S --noconfirm --needed \
   ripgrep \
   satty \
   sddm \
-  signal-desktop \
   slurp \
   spotify \
   starship \
@@ -111,6 +111,7 @@ sudo pacman -S --noconfirm --needed \
   uwsm \
   virt-manager \
   vde2 \
+  walker \
   waybar \
   wayfreeze \
   whois \

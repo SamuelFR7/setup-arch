@@ -19,6 +19,7 @@ if ! op account get &>/dev/null; then
 fi
 
 # Setup Configs
+mkdir -p "$HOME/.ssh"
 touch "$HOME/.ssh/dotfiles-key"
 op document get "i3rjiohtbjyrqznaon4oia4el4" --out-file "$HOME/.ssh/dotfiles-key"
 chmod 600 "$HOME/.ssh/dotfiles-key"
